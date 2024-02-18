@@ -17,6 +17,7 @@ use App\Services\UserGroupServiceI;
 use App\Services\UserGroupService;
 use App\Services\UserServiceI;
 use App\Services\UserService;
+use App\Services\TaskService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
         BaseServiceI::class => BaseService::class,
         
         EmployeeServiceI::class => EmployeeService::class,
-        TaskServiceI::class => EmployeeService::class,
+        TaskServiceI::class => TaskService::class,
         TaskActivityServiceI::class => TaskActivityService::class,
         TaskCategoryServiceI::class => TaskCategoryService::class,
         
