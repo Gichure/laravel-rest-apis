@@ -14,6 +14,8 @@ class TaskCategoriesSeeder extends Seeder
     public function run(): void
     {
         //
+        TaskCategory::truncate();
+        
         TaskCategory::create([
             'name' => 'Default',
             'created_at' => Carbon::now(),

@@ -2,15 +2,18 @@
 This project demonstrates using Laravel framework to serve REST APIs by use of a tasks management and follow up system.
 
 ### Requirements
--  PHP 8.2+
-- Laravel 10.3+
-- MySQL 8+
+-  PHP v8.3.2
+-  Laravel v10.44.0
+-  MySQL 8+
 
 
 ### Technical Features
 -  REST APIs
 -  Stateless Authentication of REST APIs
 -  ORM
+-  Inheritance
+-  Abstraction
+- Single Responsility Principle
 -  .... More to be added
 
 
