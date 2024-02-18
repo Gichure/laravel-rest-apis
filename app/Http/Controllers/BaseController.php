@@ -11,9 +11,12 @@ class BaseController extends Controller
     
     protected $service;
     
-    public function __construct(BaseServiceI $service)
+    protected $model;
+    
+    public function __construct(BaseServiceI $service, Model $model)
     {
         $this->service = $service;
+        $this->model = $model;
     }
     
     /**

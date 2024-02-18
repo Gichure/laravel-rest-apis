@@ -16,8 +16,6 @@ class UsersSeeder extends Seeder
     {
         //
         
-        User::truncate();
-        
         User::create([
             'name' => 'Administrator',
             'email' => 'admin@test.com',

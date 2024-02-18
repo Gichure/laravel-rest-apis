@@ -14,8 +14,6 @@ class UserGroupsSeeder extends Seeder
     public function run(): void
     {
         //
-        UserGroup::truncate();
-        
         UserGroup::create([
             'name' => 'Default',
             'created_at' => Carbon::now(),

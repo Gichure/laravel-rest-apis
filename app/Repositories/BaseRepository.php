@@ -27,8 +27,7 @@ class BaseRepository
     
     public function all(array $attributes)
     {
-        
-        return $this->model->where($attributes);
+        return $this->model->where($attributes)->get();
     }
     
     public function find($id)

@@ -8,9 +8,10 @@ use App\Models\TaskCategory;
 class TaskCategoryController extends BaseController
 {
     
-    public function __construct(TaskCategoryServiceI $service)
+    public function __construct(TaskCategoryServiceI $service, TaskCategory $model)
     {
         $this->service = $service;
+        $this->model = $model;
     }
     
 }
