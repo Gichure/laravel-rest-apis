@@ -3,6 +3,7 @@ namespace App\Repositories;
 
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\TaskActivity;
 
 
 /**
@@ -13,5 +14,9 @@ use Illuminate\Database\Eloquent\Model;
 class TaskActivityRepository extends BaseRepository
 {
     
-   
+    public function __construct(TaskActivity $model)
+    {
+        $this->model = $model;
+    }
+    
 }

@@ -2,8 +2,7 @@
 namespace App\Repositories;
 
 
-use Illuminate\Database\Eloquent\Model;
-
+use App\Models\TaskCategory;
 
 /**
  *
@@ -13,5 +12,9 @@ use Illuminate\Database\Eloquent\Model;
 class TaskCategoryRepository extends BaseRepository
 {
     
+    public function __construct(TaskCategory $model)
+    {
+        $this->model = $model;
+    }
    
 }

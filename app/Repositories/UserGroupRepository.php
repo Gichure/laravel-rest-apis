@@ -3,6 +3,7 @@ namespace App\Repositories;
 
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\UserGroup;
 
 
 /**
@@ -13,5 +14,9 @@ use Illuminate\Database\Eloquent\Model;
 class UserGroupRepository extends BaseRepository
 {
     
-   
+    public function __construct(UserGroup $model)
+    {
+        $this->model = $model;
+    }
+    
 }
