@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('user_groups', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('supervisor_id')->nullable(true);
-            $table->foreign('supervisor_id')->references('id')->on('employees');
+            $table->string('supervisor_id')->nullable(true);
             $table->timestamps();
         });
     }
