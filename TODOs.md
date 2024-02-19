@@ -1,7 +1,7 @@
 TASK SYSTEM 
 CHAPTER ONE OVERVIEW
 1.1 General Background
-The tasks and follow up module will be part of the Project Management System that will be used by Cytonn Staff to assign tasks and follow up if the tasks are completed in time. This will help streamline tasks’ follow ups.
+The tasks and follow up module will be part of the Project Management System that will be used by staff to assign tasks and follow up if the tasks are completed in time. This will help streamline tasks’ follow ups.
 1.2 Scope
 The purpose of this document is to give a detailed description of the requirements for the Tasks and follow up system which will act as a platform where supervisors and juniors can assign tasks and follow up on the same. The tasks and follow up system simply should involve creating of tasks/issues that are not related with specific projects as we have in Project Management but they will be categorized. 
 These tasks will have added functionality such as: 
@@ -25,7 +25,7 @@ The system will also check employee performance, e.g. track employees’ open ta
 1.5 User Stories
 User Roles and Responsibilities
 The users of the task and follow-up module include: 
-o	Cytonn Employees
+o	Employees
 •	Departmental Managers/Supervisors
 •	Departmental Members/Juniors
 1.5.1 All Users
@@ -67,7 +67,7 @@ Constraint:
 Default category
 This category will include all those tasks that:
 •	Do not fall under any of the categories
-•	Are generated from tasks@cytonn.com
+•	Are generated from a standard email
 Though later they can be edited and grouped under a new category or an existing category.
 
 2.1.2 Functional Requirement 2
