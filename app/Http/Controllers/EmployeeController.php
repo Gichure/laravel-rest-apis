@@ -19,7 +19,7 @@ class EmployeeController extends BaseController
             $records = $this->service->tasks($id);
             return response()->json([
                 "success" => true,
-                "message" => "Records fetch successfully.",
+                "message" => "Records fetched successfully.",
                 "data" => $records
             ]);
         } catch (\Exception $e) {
