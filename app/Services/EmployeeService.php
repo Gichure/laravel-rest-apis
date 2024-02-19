@@ -14,11 +14,14 @@ class EmployeeService extends BaseService implements EmployeeServiceI
 {
     
     private $userRepository;
+
+    private $taskRepository;
     
-    public function __construct(EmployeeRepository $repository, UserRepository $userRepository)
+    public function __construct(EmployeeRepository $repository, UserRepository $userRepository, TaskRepository $taskRepository)
     {
         $this->repository = $repository;
         $this->userRepository = $userRepository;
+        $this->taskRepository = $taskRepository;
     }
     
     public function create(array $attributes)
@@ -45,6 +48,11 @@ class EmployeeService extends BaseService implements EmployeeServiceI
             $this->userRepository->delete($employee->user_id);
         
         return $employee;
+    }
+
+    public function tasks($id){
+        $tasks = $this->taskRepository->all(['employee_id' => $id]);
+        return $tasks;
     }
    
 }

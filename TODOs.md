@@ -132,3 +132,8 @@ An essential component of an effective system is intuitive information architect
 A sitemap is an organizational chart that visually depicts a system’s primary sections. 
 Wireframes visually depict the elements that make up a page, including the content areas and their hierarchy, features and functionality. They are not intended to provide a design direction, but give an idea of the page elements. 
 
+
+
+References:
+-  Read emails from inbox >> https://github.com/barbushin/php-imap  
+

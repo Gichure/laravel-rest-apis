@@ -11,5 +11,7 @@ namespace App\Services;
  */
 interface EmployeeServiceI extends BaseServiceI
 {
+
+    public function tasks($id);
     
 }

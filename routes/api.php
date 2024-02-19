@@ -31,6 +31,7 @@ Route::get('tasks/{id}/activities', [TaskController::class, 'activities']);
 Route::get('tasks/{assignId}/assign/{employeeId}', [TaskController::class, 'assign']);
 Route::apiResource('task-activities', TaskActivityController::class);
 Route::apiResource('employees', EmployeeController::class);
+Route::get('employees/{id}/tasks', [EmployeeController::class, 'tasks']);
 Route::apiResource('user-groups', UserGroupController::class);
 Route::get('user-groups/{id}/employees', [UserGroupController::class, 'employees']);
 Route::apiResource('users', UserController::class);
