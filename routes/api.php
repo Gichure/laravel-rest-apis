@@ -8,6 +8,7 @@ use App\Http\Controllers\TaskActivityController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\UserGroupController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MailboxController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,5 @@ Route::get('employees/{id}/tasks', [EmployeeController::class, 'tasks']);
 Route::apiResource('user-groups', UserGroupController::class);
 Route::get('user-groups/{id}/employees', [UserGroupController::class, 'employees']);
 Route::apiResource('users', UserController::class);
+Route::apiResource('mailbox', MailboxController::class);
+

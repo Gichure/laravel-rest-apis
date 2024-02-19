@@ -11,8 +11,6 @@ use App\Repositories\TaskCategoryRepository;
 class TaskCategoryService extends BaseService implements TaskCategoryServiceI
 {
     
-    protected $repository;
-    
     public function __construct(TaskCategoryRepository $repository)
     {
         $this->repository = $repository;

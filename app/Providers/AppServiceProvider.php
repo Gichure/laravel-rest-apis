@@ -18,6 +18,8 @@ use App\Services\UserGroupService;
 use App\Services\UserServiceI;
 use App\Services\UserService;
 use App\Services\TaskService;
+use App\Services\MailboxServiceI;
+use App\Services\MailboxService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -32,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
         
         UserGroupServiceI::class => UserGroupService::class,
         UserServiceI::class => UserService::class,
+        
+        MailboxServiceI::class => MailboxService::class
     ];
     /**
      * Register any application services.

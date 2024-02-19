@@ -11,8 +11,6 @@ use App\Repositories\TaskRepository;
 class TaskService extends BaseService implements TaskServiceI
 {
     
-    protected $repository;
-    
     public function __construct(TaskRepository $repository)
     {
         $this->repository = $repository;
