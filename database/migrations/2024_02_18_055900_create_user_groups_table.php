@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('user_groups', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->string('email')->unique();
             $table->string('supervisor_id')->nullable(true);
             $table->timestamps();
         });

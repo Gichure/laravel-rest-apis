@@ -13,6 +13,7 @@ class UserGroup extends Model
     
     protected $fillable = [
         'name',
+        'email',
         'supervisor_id'
     ];
     
