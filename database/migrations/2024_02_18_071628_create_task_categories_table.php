@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('task_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->foreignId('user_group_id')->nullable(true);
+            $table->foreign('user_group_id')->references('id')->on('user_groups');
             $table->softDeletes();
             $table->timestamps();
         });

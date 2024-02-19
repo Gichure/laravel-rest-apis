@@ -12,6 +12,7 @@ class TaskCategory extends Model
     protected $table = 'task_categories';
     
     protected $fillable = [
-        'name'
+        'name',
+        'user_group_id'
     ];
 }
