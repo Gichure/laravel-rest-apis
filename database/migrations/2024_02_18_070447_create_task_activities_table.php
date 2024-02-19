@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('task_id')->references('id')->on('tasks');
             $table->foreignId('employee_id')->nullable(false);
             $table->foreign('employee_id')->references('id')->on('employees');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

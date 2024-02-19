@@ -24,6 +24,7 @@ return new class extends Migration
             $table->foreign('employee_id')->references('id')->on('employees');
             $table->foreignId('user_group_id')->nullable(true);
             $table->foreign('user_group_id')->references('id')->on('user_groups');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

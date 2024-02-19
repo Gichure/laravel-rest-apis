@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->string('email')->unique();
             $table->string('supervisor_id')->nullable(true);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
