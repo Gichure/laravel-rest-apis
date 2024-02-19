@@ -24,7 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 Route::apiResource('categories', TaskCategoryController::class);
 Route::apiResource('tasks', TaskController::class);
 Route::get('tasks/{id}/activities', [TaskController::class, 'activities']);

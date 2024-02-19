@@ -21,7 +21,8 @@ class Task extends Model
         'task_status',
         'task_type',
         'employee_id',
-        'user_group_id'        
+        'user_group_id',
+        'created_by_id'        
     ];
     
     public function employee(){
@@ -34,5 +35,9 @@ class Task extends Model
     
     public function activities(){
         return $this->hasMany(TaskActivity::class, 'task_id', 'id');
+    }
+
+    public function createBy(){
+        return $this->belongsTo(User::class, 'created_by_id');
     }
 }

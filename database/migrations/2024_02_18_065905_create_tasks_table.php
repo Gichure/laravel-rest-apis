@@ -20,6 +20,8 @@ return new class extends Migration
             $table->enum('task_priority', ['LOW', 'MEDIUM','HIGH'])->default('LOW')->nullable(false);
             $table->enum('task_status', ['PENDING', 'ON_GOING','ON_HOLD', 'COMPLETED'])->default('PENDING')->nullable(false);
             $table->enum('task_type', ['PRIVATE', 'PUBLIC'])->default('PRIVATE')->nullable(false);
+            $table->foreignId('created_by_id')->nullable(true);
+            $table->foreign('created_by_id')->references('id')->on('users');
             $table->foreignId('employee_id')->nullable(true);
             $table->foreign('employee_id')->references('id')->on('employees');
             $table->foreignId('user_group_id')->nullable(true);

@@ -25,11 +25,11 @@ The system will also check employee performance, e.g. track employees’ open ta
 1.5 User Stories
 User Roles and Responsibilities
 The users of the task and follow-up module include: 
-o	Employees
-•	Departmental Managers/Supervisors
-•	Departmental Members/Juniors
-1.5.1 All Users
-All users should be able to:
+o	Employees  
+•	Departmental Managers/Supervisors  
+•	Departmental Members/Juniors  
+1.5.1 All Users  
+All users should be able to:  
 o	Create a new task.
 o	Assign a new task to another employee.
 o	Specify task category, priority and due date
