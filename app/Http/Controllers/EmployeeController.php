@@ -13,7 +13,7 @@ class EmployeeController extends BaseController
         $this->model = $model;
     }
 
-    public function employees(string $id){
+    public function tasks(string $id){
 
         try {
             $records = $this->service->tasks($id);
