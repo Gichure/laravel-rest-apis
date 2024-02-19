@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Employee;
 
 class UsersSeeder extends Seeder
 {
@@ -16,10 +17,18 @@ class UsersSeeder extends Seeder
     {
         //
         
-        User::create([
+        $user = User::create([
             'name' => 'Administrator',
             'email' => 'admin@test.com',
             'password' => Hash::make('admin'),
+        ]);
+        
+        Employee::create([
+            'title' => 'MR.',
+            'designation' => 'Administrator',
+            'user_id' => $user->id,
+            'reports_to_id' => null,
+            'user_group_id' => null
         ]);
     }
 }

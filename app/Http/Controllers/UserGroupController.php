@@ -8,19 +8,16 @@ use App\Models\UserGroup;
 class UserGroupController extends BaseController
 {
 
-    private $employeeService;
-
-    public function __construct(UserGroupServiceI $service, EmployeeServiceI $employeeService, UserGroup $model)
+    public function __construct(UserGroupServiceI $service, UserGroup $model)
     {
         $this->service = $service;
-        $this->employeeService = $employeeService;
         $this->model = $model;
     }
 
     public function employees(string $id){
 
         try {
-            $records = $this->employeeService->all(['user_group_id' => $id]);
+            $records = $this->service->employees($id);
             return response()->json([
                 "success" => true,
                 "message" => "Records fetched successfully.",

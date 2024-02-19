@@ -18,6 +18,7 @@ class TaskCategoriesSeeder extends Seeder
         
         TaskCategory::create([
             'name' => 'Default',
+            'user_group_id' => null,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

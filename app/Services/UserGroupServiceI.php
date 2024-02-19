@@ -12,4 +12,6 @@ namespace App\Services;
 interface UserGroupServiceI extends BaseServiceI
 {
     
+    public function employees($id);
+    
 }

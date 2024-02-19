@@ -2,14 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class UserGroup extends Model
+class UserGroup extends BaseModel
 {
-    use HasFactory, SoftDeletes;
-    
+
     protected $table = 'user_groups';
     
     protected $fillable = [
@@ -17,6 +13,8 @@ class UserGroup extends Model
         'email',
         'supervisor_id'
     ];
+    
+    protected $with = ['supervisor'];
     
     public function employees(){
         return $this->hasMany(Employee::class, 'user_group_id', 'id');

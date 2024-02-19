@@ -16,6 +16,8 @@ class UserGroupsSeeder extends Seeder
         //
         UserGroup::create([
             'name' => 'Default',
+            'email' => 'admin@test.com',
+            'supervisor_id' => null,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

@@ -2,12 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-class TaskCategory extends Model
+class TaskCategory extends BaseModel
 {
-    use HasFactory, SoftDeletes;
     
     protected $table = 'task_categories';
     
@@ -15,4 +11,10 @@ class TaskCategory extends Model
         'name',
         'user_group_id'
     ];
+    
+    protected $with = ['group'];
+    
+    public function group(){
+        return $this->belongsTo(UserGroup::class, 'user_group_id');
+    }
 }
