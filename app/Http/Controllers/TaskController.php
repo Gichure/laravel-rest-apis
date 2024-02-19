@@ -38,5 +38,25 @@ class TaskController extends BaseController
 
     }
 
+    public function assign(string $taskId, string $employeeId){
+
+        try {
+            $records = $this->service->assign($taskId, $employeeId);
+            return response()->json([
+                "success" => true,
+                "message" => "Records updated successfully.",
+                "data" => $records
+            ]);
+        } catch (\Exception $e) {
+            
+            return response()->json([
+                "success" => false,
+                "message" => $e->getMessage(),
+                "data" => []
+            ]);
+        }
+
+    }
+
   
 }

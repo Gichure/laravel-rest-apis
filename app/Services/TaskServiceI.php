@@ -11,5 +11,7 @@ namespace App\Services;
  */
 interface TaskServiceI extends BaseServiceI
 {
+
+    public function assign($taskId, $employeeId);
     
 }

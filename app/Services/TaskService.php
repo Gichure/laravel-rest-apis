@@ -17,5 +17,13 @@ class TaskService extends BaseService implements TaskServiceI
     {
         $this->repository = $repository;
     }
+
+    public function assign($taskId, $employeeId){
+        $task = $this->repository->find($taskId);
+        $task->employee_id = $employeeId;
+        $task->save();
+
+        return $task;
+    }
    
 }
