@@ -23,5 +23,13 @@ class TaskService extends BaseService implements TaskServiceI
 
         return $task;
     }
+
+    public function getPendingTasks($employeeId){
+        return $this->repository->getPendingTasks($employeeId);
+    }
+
+    public function getPendingTasksByGroup($groupId){
+        return $this->repository->getPendingTasksByGroup($groupId);
+    }
    
 }
