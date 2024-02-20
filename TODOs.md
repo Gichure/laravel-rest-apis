@@ -1,5 +1,4 @@
 ## TASK SYSTEM 
-### CHAPTER ONE OVERVIEW  
 #### General Background
 The tasks and follow up module will be part of the Project Management System that will be used by staff to assign tasks and follow up if the tasks are completed in time. This will help streamline tasks’ follow ups.
 #### Scope
@@ -55,10 +54,8 @@ Inter-departmental tasks
 o	View all inter-relating asks between their departments and other departments 
 o	Generate a report of all inter-relating tasks between their departments and other departments within a specified period.
  
-### CHAPTER TWO FUNCTIONAL REQUIREMENTS
-#### User Scenarios
-##### Functional Requirement 1
-Feature: Task Category
+### REQUIREMENTS
+##### Task Category
 Desc: Given an authorized employee is logged in   
              Then they should be able to add unique categories for their department   
              In which tasks, will fall   
@@ -69,70 +66,52 @@ This category will include all those tasks that:
 -	Are generated from a standard email
 Though later they can be edited and grouped under a new category or an existing category.
 
-##### Functional Requirement 2
-Feature: Create a New Task  
+#####   Create a New Task  
 Desc:  Given that a user is logged in, then they should be able to access the tasks and follow-  
                    Up page from the dashboard from which they can click a link for creating a new task.
 -	On the create task page, the user can specify the task category, due dates, priority, description access level (public or private), the person to whom the task is assigned to, and the department(s) and/or users who should receive a notification regarding task creation and progress.
 -	On specifying task details, the user should be able to save the task after which the system notifies specified members and displays it on the users’ board for public view.
 -	For tasks with private access, only persons to whom the task is assigned and the manager of the concerned department(s) will receive a task creation and progress notifications.
-Scenario 2: Schedule - Repeating Tasks
+##### Schedule - Repeating Tasks
 Given an employee is logged in
 Then they should be able to specify repetitive tasks and which days they recur
 They should also be able to specify repetitive tasks that are dynamic i.e. have no set day of 
 Recurrence and set reminders i.e. daily reminders
-Scenario 4: Task Reminders
+##### Task Reminders
 Given an employee is logged in
 Then they should be able to set reminders on each task
 e.g. after how long will the system send an email reminder to the employee
-##### Functional Requirement 3
-Feature: Task Progress
+##### Task Progress
 Desc: Once a task is pinned to have an “on-going” status, the person to whom the task was 
              assigned should be able to add a progress message.
-##### Functional Requirement 4
-Feature: View Tasks
-Desc:     Given that a user is logged in, then they should be able to view all tasks created within   
-                   all departments and having a public access level. 
+##### View Tasks  
+Desc:   Given that a user is logged in, then they should be able to view all tasks created within   
+                   all departments and having a public access level.   
 -	Users should also be able to view private tasks in which they created or were added as task members.
 -	Departmental managers should be able to view all private and public tasks ongoing between their departments and other departments.
 -	However, private tasks originated and destined to a given department shall be visible only to the task creator, task assignee, and the department manager or any other specified party.
 
-##### Functional Requirement 5
-Feature: Follow
-Scenario 1: Follow Tasks
-Given the employee is logged in 
+##### Follow Tasks
+Given the employee is logged in  
 then they should be able to follow a task and receive email notifications on the email.
-Scenario 2: Follow Employees
-Given the employee is logged in
-Then they should be able to follow employee and receive email notifications
+##### Follow Employees
+Given the employee is logged in  
+Then they should be able to follow employee and receive email notifications  
 When the employee is assigned a task and when they complete a task
  
-##### Functional Requirement 6
-Feature: Reports
-Scenario 1: Daily Reports
+#####  Daily Reports  
 Employees Daily reports should include the following:
 -	The number of tasks assigned, completed, pending and overdue tasks
 -	Detail on each of the tasks e.g. task name, description, status update and due date
-Scenario 2: Weekly Reports
+#####  Weekly Reports
 Employee weekly reports should include the following:
 -	The number of tasks assigned, completed, pending and over-due in the given week.
--	A high-level summary of each task e.g. Just the task name
-Scenario 2.1 Weekly Reports
+-	A high-level summary of each task e.g. Just the task name  
+
 Departmental weekly report should include the following:
 -  The number of tasks assigned, completed, pending and over-due on each category.
  
-##### Functional Requirement 7
-Feature: User Management  
+#####  User Management  
 Desc:   
--	Users records which includes: job level, employee names, and employee department shall be linked form the HR system using an API. This means an inactive user account for all employees shall exist and which shall be verified and activated once a user makes a first login-trial using Google’s OAuth API. (Since the HR system is not available to you, use mocked values)  
- 
-### CHAPTER 3 INFORMATION ARCHITECTURE  
-An essential component of an effective system is intuitive information architecture as well as logical grouping of information. This section determines the overall structure of the system that will inform the visual structure and design of the system. This will be done using sitemaps and wireframes.    
-A sitemap is an organizational chart that visually depicts a system’s primary sections.   
-Wireframes visually depict the elements that make up a page, including the content areas and their hierarchy, features and functionality. They are not intended to provide a design direction, but give an idea of the page elements.   
-
-
-
-References:
--  Read emails from inbox >> https://github.com/barbushin/php-imap  
+-	Users records which includes: job level, employee names, and employee department shall be linked form the HR system using an API. This means an inactive user account for all employees shall exist and which shall be verified and activated once a user makes a first login-trial using Google’s OAuth API. (Since the HR system is not available to you, use mocked values) 
 
