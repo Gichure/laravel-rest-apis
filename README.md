@@ -27,3 +27,5 @@ This project demonstrates using Laravel framework to serve REST APIs by use of a
 -  Send notifications
 -  Attach evidence/requirements - videos, photos, documents
 -  Reports generation
+
+More [here](TODOs.md).
