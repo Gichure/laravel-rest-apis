@@ -31,13 +31,11 @@ class MailboxService implements MailboxServiceI
             'US-ASCII'
             );
         try {
-            echo "+------ CONNECTING  ------+\n";
             // Search in mailbox folder for specific emails
             // PHP.net imap_search criteria: http://php.net/manual/en/function.imap-search.php
             // Here, we search for "all" emails
             $mails_ids = $mailbox->searchMailbox('ALL');
         } catch(ConnectionException $ex) {
-            echo "IMAP connection failed: " . $ex;
             die();
         }
         
@@ -49,8 +47,6 @@ class MailboxService implements MailboxServiceI
         $mailbox->setAttachmentsIgnore(true);
         
         foreach($mails_ids as $mail_id) {
-            // Just a comment, to  see, that this is the begin of an email
-            echo "+------ P A R S I N G ------+\n";
             
             // Get mail by $mail_id
             $email = $mailbox->getMail(
@@ -70,39 +66,15 @@ class MailboxService implements MailboxServiceI
                 'user_group_id' => 1,
                 'created_by_id' => 1   
             ]);
-           // var_dump($email->to);
-            echo "\nfrom-name: " . (isset($email->fromName)) ? $email->fromName : $email->fromAddress;
-            echo "\nfrom-email: " . $email->fromAddress;
-            //echo "\nto: " . $email->to;
-            echo "\nsubject: " . $email->subject;
-            echo "\nmessage_id: " . $email->messageId;
-            
-            echo "\nmail has attachments? ";
-            if($email->hasAttachments()) {
-                echo "Yes\n";
-            } else {
-                echo "No\n";
-            }
-            
-            if(!empty($email->getAttachments())) {
-                echo count($email->getAttachments()) . " attachements";
-            }
-            if($email->textHtml) {
-                echo "Message HTML:\n" . $email->textHtml;
-            } else {
-                echo "Message Plain:\n" . $email->textPlain;
-            }
             
             if(!empty($email->autoSubmitted)) {
                 // Mark email as "read" / "seen"
                 $mailbox->markMailAsRead($mail_id);
-                echo "+------ IGNORING: Auto-Reply ------+";
             }
             
             if(!empty($email->precedence)) {
                 // Mark email as "read" / "seen"
-                
-                echo "+------ IGNORING: Non-Delivery Report/Receipt ------+";
+                $mailbox->markMailAsRead($mail_id);
             }
             $mailbox->markMailAsRead($mail_id);
         }

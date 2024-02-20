@@ -10,7 +10,9 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "php-imap/php-imap": "^5.0"
+        "livewire/livewire": "^3.4",
+        "php-imap/php-imap": "^5.0",
+        "robsontenorio/mary": "^1.21"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
