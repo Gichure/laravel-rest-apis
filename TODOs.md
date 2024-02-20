@@ -1,16 +1,16 @@
 ## TASK SYSTEM 
 #### General Background
-The tasks and follow up module will be part of the Project Management System that will be used by staff to assign tasks and follow up if the tasks are completed in time. This will help streamline tasks’ follow ups.
+The tasks and follow up system will be used by staff to assign tasks and follow up if the tasks are completed in time. This will help streamline tasks’ follow ups.
 #### Scope
-The purpose of this document is to give a detailed description of the requirements for the Tasks and follow up system which will act as a platform where supervisors and juniors can assign tasks and follow up on the same. The tasks and follow up system simply should involve creating of tasks/issues that are not related with specific projects as we have in Project Management but they will be categorized. 
+This isa detailed requirements for the Tasks and follow up system which will act as a platform where supervisors and juniors can assign tasks and follow up on the same. The tasks and follow up system simply should involve creating of tasks/issues that are not related with specific projects as we have in Project Management but they will be categorized. 
 These tasks will have added functionality such as: 
 -	Tagging another employee in a task
 -	Indicating a task is private or public
 -	Creation user groups per task with employees who should be constantly notified on task updates
 #### Objectives
-1.3.1 Main Objective
+##### Main Objective
 To provide a means of coordination and management of tasks and follow ups.
-1.3.2 Specific Objectives
+##### Specific Objectives
 1.	To provide a platform where the employees can assign tasks or have tasks assigned to them.
 2.	To provide a platform where the employees can be updating daily on the status of their tasks
 3.	To provide a platform where employees can select if a task is private or public when assigning.
@@ -23,40 +23,40 @@ The system will also check employee performance, e.g. track employees’ open ta
 #### User Stories
 User Roles and Responsibilities
 The users of the task and follow-up module include: 
-o	Employees  
+-	Employees  
 -	Departmental Managers/Supervisors  
 -	Departmental Members/Juniors  
 ##### All Users  
 All users should be able to:  
-o	Create a new task.
-o	Assign a new task to another employee.
-o	Specify task category, priority and due date
-o	Select the department(s) and/or employee(s) who will receive notifications once the task is created. (user group)
-o	Attach document files while creating/assigning a task.
-o	Specify if a task is private or public.
+-	Create a new task.
+-	Assign a new task to another employee.
+-	Specify task category, priority and due date
+-	Select the department(s) and/or employee(s) who will receive notifications once the task is created. (user group)
+-	Attach document files while creating/assigning a task.
+-	Specify if a task is private or public.
 -	 the task is private, users should be able to specify who has access to it.
-o	Edit tasks if:
+-	Edit tasks if:
 -	They created the task or the one who created the task is their junior
-o	Receive notification when: 
+-	Receive notification when: 
 -	Added to a task user groups.
-o	Filter by department and View all:
+-	Filter by department and View all:
 -	Public tasks in the selected departments 
-o	Set reminders of their tasks.
-o	Re-assign a closed task
+-	Set reminders of their tasks.
+-	Re-assign a closed task
 -	The supervisor/assignee should be able to re-assign a given closed or ongoing task.
 ##### Departmental Managers
 They should be able to:
 Private tasks
-o	View tasks and add comments on private tasks listed under their departments.
-o	View all private tasks listed under their departments each with the following details: title, description, who created, who was assigned, priority, due date, and the current progress status of the tasks.
-o	Generate a report of all private tasks listed under their departments within a specified period 
+-	View tasks and add comments on private tasks listed under their departments.
+-	View all private tasks listed under their departments each with the following details: title, description, who created, who was assigned, priority, due date, and the current progress status of the tasks.
+-	Generate a report of all private tasks listed under their departments within a specified period 
 Inter-departmental tasks
-o	View all inter-relating asks between their departments and other departments 
-o	Generate a report of all inter-relating tasks between their departments and other departments within a specified period.
+-	View all inter-relating asks between their departments and other departments 
+-	Generate a report of all inter-relating tasks between their departments and other departments within a specified period.
  
-### REQUIREMENTS
+#### REQUIREMENTS
 ##### Task Category
-Desc: Given an authorized employee is logged in   
+Given an authorized employee is logged in   
              Then they should be able to add unique categories for their department   
              In which tasks, will fall   
 Constraint:  
@@ -67,7 +67,7 @@ This category will include all those tasks that:
 Though later they can be edited and grouped under a new category or an existing category.
 
 #####   Create a New Task  
-Desc:  Given that a user is logged in, then they should be able to access the tasks and follow-  
+Given that a user is logged in, then they should be able to access the tasks and follow-  
                    Up page from the dashboard from which they can click a link for creating a new task.
 -	On the create task page, the user can specify the task category, due dates, priority, description access level (public or private), the person to whom the task is assigned to, and the department(s) and/or users who should receive a notification regarding task creation and progress.
 -	On specifying task details, the user should be able to save the task after which the system notifies specified members and displays it on the users’ board for public view.
@@ -85,7 +85,7 @@ e.g. after how long will the system send an email reminder to the employee
 Desc: Once a task is pinned to have an “on-going” status, the person to whom the task was 
              assigned should be able to add a progress message.
 ##### View Tasks  
-Desc:   Given that a user is logged in, then they should be able to view all tasks created within   
+Given that a user is logged in, then they should be able to view all tasks created within   
                    all departments and having a public access level.   
 -	Users should also be able to view private tasks in which they created or were added as task members.
 -	Departmental managers should be able to view all private and public tasks ongoing between their departments and other departments.
@@ -112,6 +112,5 @@ Departmental weekly report should include the following:
 -  The number of tasks assigned, completed, pending and over-due on each category.
  
 #####  User Management  
-Desc:   
--	Users records which includes: job level, employee names, and employee department shall be linked form the HR system using an API. This means an inactive user account for all employees shall exist and which shall be verified and activated once a user makes a first login-trial using Google’s OAuth API. (Since the HR system is not available to you, use mocked values) 
+Users records which includes: job level, employee names, and employee department shall be linked form the HR system using an API. This means an inactive user account for all employees shall exist and which shall be verified and activated once a user makes a first login-trial using Google’s OAuth API. (Since the HR system is not available to you, use mocked values) 
 
