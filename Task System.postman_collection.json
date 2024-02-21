@@ -1,0 +1,2569 @@
+{
+	"info": {
+		"_postman_id": "2e19c784-7e03-4b22-aa6b-3e4f5887d667",
+		"name": "Task System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2094629"
+	},
+	"item": [
+		{
+			"name": "Task Categories",
+			"item": [
+				{
+					"name": "Get Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 12:50:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Records fetched successfully.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Default\",\n            \"created_at\": \"2024-02-18T12:39:24.000000Z\",\n            \"updated_at\": \"2024-02-18T12:39:24.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Projects\",\r\n    \"user_group_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Heads of Departments\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 12:52:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record saved successfully.\",\n    \"data\": {\n        \"name\": \"Heads of Departments\",\n        \"updated_at\": \"2024-02-18T12:52:45.000000Z\",\n        \"created_at\": \"2024-02-18T12:52:45.000000Z\",\n        \"id\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Projects\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Heads of Departments\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:15:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record updated successfully.\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Heads of Departments\",\n        \"created_at\": \"2024-02-18T13:14:30.000000Z\",\n        \"updated_at\": \"2024-02-18T13:15:27.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:16:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record deleted successfully.\",\n    \"data\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Get Tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tasks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tasks",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:51:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Records fetched successfully.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Setting Environment\",\n            \"description\": \"Create an environment for system installation\",\n            \"start_time\": \"2024-02-18 00:00:00\",\n            \"end_time\": null,\n            \"task_priority\": \"HIGH\",\n            \"task_status\": \"PENDING\",\n            \"task_type\": \"PRIVATE\",\n            \"employee_id\": 4,\n            \"user_group_id\": 2,\n            \"created_at\": \"2024-02-18T13:50:46.000000Z\",\n            \"updated_at\": \"2024-02-18T13:50:46.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Setting Environment\",\r\n    \"description\": \"Create an environment for system installation\",\r\n    \"start_time\": \"2024-02-18\",\r\n    \"end_time\": \"2024-02-19\",\r\n     \"task_priority\": \"HIGH\",\r\n      \"task_status\": \"PENDING\",\r\n     \"task_type\": \"PRIVATE\",\r\n      \"employee_id\" : 1,\r\n      \"user_group_id\": 1,\r\n      \"created_by_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tasks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Setting Environment\",\r\n    \"description\": \"Create an environment for system installation\",\r\n    \"start_time\": \"2024-02-18\",\r\n    \"end_time\": null,\r\n    \"task_priority\": \"HIGH\",\r\n    \"task_status\": \"PENDING\",\r\n    \"task_type\": \"PRIVATE\",\r\n    \"employee_id\": 4,\r\n    \"user_group_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/tasks",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:50:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record saved successfully.\",\n    \"data\": {\n        \"title\": \"Setting Environment\",\n        \"description\": \"Create an environment for system installation\",\n        \"start_time\": \"2024-02-18\",\n        \"end_time\": null,\n        \"task_priority\": \"HIGH\",\n        \"task_status\": \"PENDING\",\n        \"task_type\": \"PRIVATE\",\n        \"employee_id\": 4,\n        \"user_group_id\": 2,\n        \"updated_at\": \"2024-02-18T13:50:46.000000Z\",\n        \"created_at\": \"2024-02-18T13:50:46.000000Z\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Setting Environment\",\r\n    \"description\": \"Create an environment for system installation\",\r\n    \"start_time\": \"2024-02-18\",\r\n    \"end_time\": \"2024-02-24\",\r\n    \"task_priority\": \"MEDIUM\",\r\n    \"task_status\": \"PENDING\",\r\n    \"task_type\": \"PRIVATE\",\r\n    \"employee_id\": 4,\r\n    \"user_group_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tasks/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Task",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Setting Environment\",\r\n    \"description\": \"Create an environment for system installation\",\r\n    \"start_time\": \"2024-02-18\",\r\n    \"end_time\": \"2024-02-24\",\r\n    \"task_priority\": \"HIGH\",\r\n    \"task_status\": \"PENDING\",\r\n    \"task_type\": \"PRIVATE\",\r\n    \"employee_id\": 4,\r\n    \"user_group_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/tasks/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:52:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record updated successfully.\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Setting Environment\",\n        \"description\": \"Create an environment for system installation\",\n        \"start_time\": \"2024-02-18 00:00:00\",\n        \"end_time\": \"2024-02-24 00:00:00\",\n        \"task_priority\": \"HIGH\",\n        \"task_status\": \"PENDING\",\n        \"task_type\": \"PRIVATE\",\n        \"employee_id\": 4,\n        \"user_group_id\": 2,\n        \"created_at\": \"2024-02-18T13:50:46.000000Z\",\n        \"updated_at\": \"2024-02-18T13:52:40.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tasks/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Task",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tasks/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:53:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record deleted successfully.\",\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Activity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Installed Operating system. Linux kernel v4.4\",\r\n    \"activity_time\": \"2024-02-19 18:11:00\",\r\n    \"task_id\": 1,\r\n    \"employee_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/task-activities",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task-activities"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Activity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Task started\",\r\n    \"activity_time\": \"2024-02-19 18:00:00\",\r\n    \"task_id\": 1,\r\n    \"employee_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/task-activities",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"task-activities"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 15:07:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record saved successfully.\",\n    \"data\": {\n        \"description\": \"Task started\",\n        \"activity_time\": \"2024-02-19 18:00:00\",\n        \"task_id\": 1,\n        \"employee_id\": 1,\n        \"updated_at\": \"2024-02-19T15:07:05.000000Z\",\n        \"created_at\": \"2024-02-19T15:07:05.000000Z\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Task Activities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/task-activities?task_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task-activities"
+							],
+							"query": [
+								{
+									"key": "task_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Task Activities",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/task-activities?task_id=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"task-activities"
+									],
+									"query": [
+										{
+											"key": "task_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 15:07:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Records fetched successfully.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"description\": \"Task started\",\n            \"activity_time\": \"2024-02-19 18:00:00\",\n            \"task_id\": 1,\n            \"employee_id\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-19T15:07:05.000000Z\",\n            \"updated_at\": \"2024-02-19T15:07:05.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"description\": \"Installed Operating system. Linux kernel v4.4\",\n            \"activity_time\": \"2024-02-19 18:11:00\",\n            \"task_id\": 1,\n            \"employee_id\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-19T15:07:53.000000Z\",\n            \"updated_at\": \"2024-02-19T15:07:53.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Task Activity",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Task allocated to Paul\",\r\n    \"activity_time\": \"2024-02-19 18:01:00\",\r\n    \"task_id\": 1,\r\n    \"employee_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/task-activities/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task-activities",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Task Activity",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Task allocated to Paul\",\r\n    \"activity_time\": \"2024-02-19 18:01:00\",\r\n    \"task_id\": 1,\r\n    \"employee_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/task-activities/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"task-activities",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 15:09:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record updated successfully.\",\n    \"data\": {\n        \"id\": 1,\n        \"description\": \"Task allocated to Paul\",\n        \"activity_time\": \"2024-02-19 18:01:00\",\n        \"task_id\": 1,\n        \"employee_id\": 1,\n        \"deleted_at\": null,\n        \"created_at\": \"2024-02-19T15:07:05.000000Z\",\n        \"updated_at\": \"2024-02-19T15:09:19.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Task Activity",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/task-activities/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task-activities",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Task Activity",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/task-activities/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"task-activities",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 15:10:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record deleted successfully.\",\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Assign Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tasks/1/assign/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks",
+								"1",
+								"assign",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Assign Task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tasks/1/assign/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks",
+										"1",
+										"assign",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 15:11:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Records updated successfully.\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Setting Environment\",\n        \"description\": \"Create an environment for system installation\",\n        \"start_time\": \"2024-02-18 00:00:00\",\n        \"end_time\": \"2024-02-20 00:00:00\",\n        \"task_priority\": \"HIGH\",\n        \"task_status\": \"PENDING\",\n        \"task_type\": \"PRIVATE\",\n        \"created_by_id\": null,\n        \"employee_id\": \"1\",\n        \"user_group_id\": 1,\n        \"deleted_at\": null,\n        \"created_at\": \"2024-02-19T15:04:29.000000Z\",\n        \"updated_at\": \"2024-02-19T15:04:29.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Employee Pending Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tasks?employee_id=1&task_status=PENDING",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "employee_id",
+									"value": "1"
+								},
+								{
+									"key": "task_status",
+									"value": "PENDING"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Group Pending Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tasks?user_group_id=1&task_status=PENDING",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "user_group_id",
+									"value": "1"
+								},
+								{
+									"key": "task_status",
+									"value": "PENDING"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "Get Employees",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Employees",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/employees",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:34:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Records fetched successfully.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"MR.\",\n            \"designation\": \"Manager\",\n            \"user_id\": 2,\n            \"reports_to_id\": null,\n            \"user_group_id\": null,\n            \"created_at\": \"2024-02-18T13:33:55.000000Z\",\n            \"updated_at\": \"2024-02-18T13:33:55.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Paul Gichure\",\r\n    \"title\": \"MR.\",\r\n    \"designation\": \"Manager\",\r\n    \"email\": \"pg@test.com\",\r\n    \"user_id\": 2,\r\n    \"reports_to_id\": null,\r\n    \"user_group_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Employee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Paul Gichure\",\r\n    \"title\": \"MR.\",\r\n    \"designation\": \"Manager\",\r\n    \"email\": \"pg@test.com\",\r\n    \"user_id\": null,\r\n    \"reports_to_id\": null,\r\n    \"user_group_id\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/employees",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:33:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record saved successfully.\",\n    \"data\": {\n        \"title\": \"MR.\",\n        \"designation\": \"Manager\",\n        \"user_id\": 2,\n        \"updated_at\": \"2024-02-18T13:33:55.000000Z\",\n        \"created_at\": \"2024-02-18T13:33:55.000000Z\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Paul Gichure\",\r\n    \"title\": \"MR.\",\r\n    \"designation\": \"Manager\",\r\n    \"email\": \"pg@test.com\",\r\n    \"user_id\": 6,\r\n    \"reports_to_id\": null,\r\n    \"user_group_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/employees/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employees",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Employee",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Paul Gichure\",\r\n    \"title\": \"MR.\",\r\n    \"designation\": \"Manager\",\r\n    \"email\": \"pg@test.com\",\r\n    \"user_id\": 6,\r\n    \"reports_to_id\": null,\r\n    \"user_group_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/employees/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employees",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:44:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record updated successfully.\",\n    \"data\": {\n        \"id\": 4,\n        \"title\": \"MR.\",\n        \"designation\": \"Manager\",\n        \"user_id\": 6,\n        \"reports_to_id\": null,\n        \"user_group_id\": 1,\n        \"created_at\": \"2024-02-18T13:43:25.000000Z\",\n        \"updated_at\": \"2024-02-18T13:43:25.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/employees/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Employee",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/employees/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employees",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:37:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record deleted successfully.\",\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Employee Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/employees/1/tasks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employees",
+								"1",
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Employee Tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/employees/1/tasks",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employees",
+										"1",
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 15:14:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Records fetched successfully.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Setting Environment\",\n            \"description\": \"Create an environment for system installation\",\n            \"start_time\": \"2024-02-18 00:00:00\",\n            \"end_time\": \"2024-02-20 00:00:00\",\n            \"task_priority\": \"HIGH\",\n            \"task_status\": \"PENDING\",\n            \"task_type\": \"PRIVATE\",\n            \"created_by_id\": null,\n            \"employee_id\": 1,\n            \"user_group_id\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-19T15:04:29.000000Z\",\n            \"updated_at\": \"2024-02-19T15:04:29.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Installation of Libraries\",\n            \"description\": \"Installation of Libraries\",\n            \"start_time\": \"2024-02-19 00:00:00\",\n            \"end_time\": \"2024-02-22 00:00:00\",\n            \"task_priority\": \"HIGH\",\n            \"task_status\": \"PENDING\",\n            \"task_type\": \"PRIVATE\",\n            \"created_by_id\": 1,\n            \"employee_id\": 1,\n            \"user_group_id\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-19T15:13:53.000000Z\",\n            \"updated_at\": \"2024-02-19T15:13:53.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Groups/Departments",
+			"item": [
+				{
+					"name": "Get User Groups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user-groups",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-groups"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Groups",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user-groups",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user-groups"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 12:59:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Records fetched successfully.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Default\",\n            \"supervisor_id\": null,\n            \"created_at\": \"2024-02-18T12:58:30.000000Z\",\n            \"updated_at\": \"2024-02-18T12:58:30.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User Group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Heads of Departments\",\r\n    \"email\": \"hod@test.com\",\r\n    \"supervisor_id\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user-groups",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-groups"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User Group",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Heads of Departments\",\r\n    \"supervisor_id\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user-groups",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user-groups"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:18:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record saved successfully.\",\n    \"data\": {\n        \"name\": \"Heads of Departments\",\n        \"supervisor_id\": null,\n        \"updated_at\": \"2024-02-18T13:18:47.000000Z\",\n        \"created_at\": \"2024-02-18T13:18:47.000000Z\",\n        \"id\": 3\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User Group",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Heads of Departments\",\r\n    \"supervisor_id\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user-groups/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-groups",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User Group",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Heads of Departments\",\r\n    \"supervisor_id\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user-groups/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user-groups",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:21:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record updated successfully.\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Heads of Departments\",\n        \"supervisor_id\": null,\n        \"created_at\": \"2024-02-18T13:18:47.000000Z\",\n        \"updated_at\": \"2024-02-18T13:18:47.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User Group",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user-groups/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-groups",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User Group",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user-groups/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user-groups",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 13:23:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record deleted successfully.\",\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Group Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"name\": \"Mary Doe\",\r\n            \"email\": \"md@test@com\",\r\n            \"title\": \"MS.\",\r\n            \"designation\": \"Secretary\",\r\n            \"reports_to_id\": 1,\r\n            \"user_group_id\": 1\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Group Employee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n            \"name\": \"Mary Doe\",\r\n            \"email\": \"md@test@com\",\r\n            \"title\": \"MS.\",\r\n            \"designation\": \"Secretary\",\r\n            \"reports_to_id\": 1,\r\n            \"user_group_id\": 1\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/employees",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 15:24:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Record saved successfully.\",\n    \"data\": {\n        \"title\": \"MS.\",\n        \"designation\": \"Secretary\",\n        \"user_id\": 2,\n        \"user_group_id\": 1,\n        \"reports_to_id\": 1,\n        \"updated_at\": \"2024-02-19T15:24:41.000000Z\",\n        \"created_at\": \"2024-02-19T15:24:41.000000Z\",\n        \"id\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Group Employees",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user-groups/1/employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-groups",
+								"1",
+								"employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Group Employees",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/user-groups/1/employees",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user-groups",
+										"1",
+										"employees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2024 15:20:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Records fetched successfully.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"MR.\",\n            \"designation\": \"Administrator\",\n            \"user_id\": 1,\n            \"reports_to_id\": null,\n            \"user_group_id\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-19T15:01:26.000000Z\",\n            \"updated_at\": \"2024-02-19T15:01:26.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 12:58:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Records fetched successfully.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Administrator\",\n            \"email\": \"admin@test.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2024-02-18T12:58:24.000000Z\",\n            \"updated_at\": \"2024-02-18T12:58:24.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Emails",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/mailbox",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"mailbox"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
